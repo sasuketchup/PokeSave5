@@ -529,6 +529,34 @@ public class SecondActivity extends AppCompatActivity {
                         builder.setTitle("項目をチェックしOKをタップ！");
                         builder.setView(layout);
 
+                        // すべてチェック
+                        ((Button) layout.findViewById(R.id.allset)).setOnClickListener(
+                                new View.OnClickListener() {
+                                    @Override
+                                    public void onClick(View view) {
+                                        for (int i=0;i<5;i++) {
+                                            varup[i].setChecked(true);
+                                            vardn[i].setChecked(true);
+                                        }
+                                        varnon.setChecked(true);
+                                    }
+                                }
+                        );
+
+                        // すべて解除
+                        ((Button) layout.findViewById(R.id.reset)).setOnClickListener(
+                                new View.OnClickListener() {
+                                    @Override
+                                    public void onClick(View view) {
+                                        for (int i=0;i<5;i++) {
+                                            varup[i].setChecked(false);
+                                            vardn[i].setChecked(false);
+                                        }
+                                        varnon.setChecked(false);
+                                    }
+                                }
+                        );
+
                         // ダイアログを閉じて結果を表示
                         builder.setPositiveButton(
                                 "OK",

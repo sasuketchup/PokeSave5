@@ -109,6 +109,7 @@ public class MainActivity extends AppCompatActivity {
                     String getegg2 = cursor2.getString(6);
                     cursor2.close();
 
+                    // 個体値を取得
                     Cursor cursor3 = db.query("Vkotai", new String[] {"kotaiH","kotaiA","kotaiB","kotaiC","kotaiD","kotaiS"}, "id="+ finalI, null, null, null, null);
                     cursor3.moveToFirst();
                     int[] getV = new int[6];
@@ -117,6 +118,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                     cursor3.close();
 
+                    // 性格を取得
                     Cursor cursor4 = db.query("Character", new String[] {"upA", "upB", "upC", "upD", "upS", "dnA", "dnB", "dnC", "dnD", "dnS", "non"}, "id="+finalI, null, null, null, null);
                     cursor4.moveToFirst();
                     int[] getupChara = new int[5];
