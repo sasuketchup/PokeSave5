@@ -1,8 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">PokeSave5</string>
 
     <string-array name="chara1">
-        <item>さみしがり</item>
+        <item><font color="#000000">さみしがり</font><font color="#ff0000">↑A</font><font color="#0000ff">↓B</font></item>
         <item>いじっぱり</item>
         <item>やんちゃ</item>
         <item>ゆうかん</item>
