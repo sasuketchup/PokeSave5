@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/layout_root">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <CheckBox
+            android:text="とくこう↑"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/upC"
+            android:checked="false"
+            android:layout_below="@+id/upA"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:textColor="#FF0000" />
+
+        <CheckBox
+            android:text="とくこう↓"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/downA"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/downC"
+            android:checked="false"
+            android:textColor="#0000FF" />
+
+        <CheckBox
+            android:text="とくぼう↑"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/upD"
+            android:checked="false"
+            android:layout_below="@+id/upB"
+            android:layout_toRightOf="@+id/upC"
+            android:layout_toEndOf="@+id/upC"
+            android:textColor="#FF0000" />
+
+        <CheckBox
+            android:text="とくぼう↓"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/downD"
+            android:checked="false"
+            android:layout_below="@+id/downA"
+            android:layout_toRightOf="@+id/downC"
+            android:layout_toEndOf="@+id/downC"
+            android:textColor="#0000FF" />
+
+        <CheckBox
+            android:text="ぼうぎょ↑"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/upB"
+            android:checked="false"
+            android:layout_alignBottom="@+id/upA"
+            android:layout_toRightOf="@+id/upA"
+            android:layout_toEndOf="@+id/upA"
+            android:textColor="#FF0000" />
+
+        <CheckBox
+            android:text="-"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/non"
+            android:checked="false"
+            android:layout_below="@+id/downC"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="10dp" />
+
+        <CheckBox
+            android:text="こうげき↑"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/upA"
+            android:checked="false"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:textColor="#FF0000" />
+
+        <CheckBox
+            android:text="すばやさ↑"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/upS"
+            android:checked="false"
+            android:layout_alignBaseline="@+id/upD"
+            android:layout_alignBottom="@+id/upD"
+            android:layout_toRightOf="@+id/upD"
+            android:layout_toEndOf="@+id/upD"
+            android:textColor="#FF0000" />
+
+        <CheckBox
+            android:text="ぼうぎょ↓"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/downB"
+            android:checked="false"
+            android:layout_above="@+id/downD"
+            android:layout_toRightOf="@+id/downA"
+            android:layout_toEndOf="@+id/downA"
+            android:textColor="#0000FF" />
+
+        <CheckBox
+            android:text="すばやさ↓"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/downS"
+            android:checked="false"
+            android:layout_alignBaseline="@+id/downD"
+            android:layout_alignBottom="@+id/downD"
+            android:layout_toRightOf="@+id/downD"
+            android:layout_toEndOf="@+id/downD"
+            android:textColor="#0000FF" />
+
+        <CheckBox
+            android:text="こうげき↓"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/downA"
+            android:checked="false"
+            android:layout_below="@+id/upC"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="13dp"
+            android:textColor="#0000FF" />
+
+        <Button
+            android:text="すべてチェック"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/allset"
+            android:layout_below="@+id/non"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="10dp" />
+
+        <Button
+            android:text="すべて解除"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/allset"
+            android:layout_toRightOf="@+id/allset"
+            android:layout_toEndOf="@+id/allset"
+            android:id="@+id/reset" />
+
+    </RelativeLayout>
+</LinearLayout>

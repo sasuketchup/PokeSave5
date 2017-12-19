@@ -18,7 +18,11 @@ public class MyOpenHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("create table NameTable2(" + "id text primary key," + "pkName text," + "ncName text,"+"tokusei text,"+"Item text,"+"eggGroup1 text,"+"eggGroup2 text"+");");
         db.execSQL("create table Vkotai(" + "id integer," + "kotaiH integer," + "kotaiA integer," + "kotaiB integer," + "kotaiC integer," + "kotaiD integer," + "kotaiS integer" + ");");
-        db.execSQL("alter table NameTable2 add ncName text");
+        db.execSQL("create table Character(" + "id integer," +
+                "upA integer," + "upB integer," + "upC integer," + "upD integer," + "upS integer," +
+                "dnA integer," + "dnB integer," + "dnC integer," + "dnD integer," + "dnS integer," +
+                "non integer" + ");");
+//        db.execSQL("alter table NameTable2 add ncName text");
     }
 
     @Override

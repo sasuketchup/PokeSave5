@@ -117,6 +117,17 @@ public class MainActivity extends AppCompatActivity {
                     }
                     cursor3.close();
 
+                    Cursor cursor4 = db.query("Character", new String[] {"upA", "upB", "upC", "upD", "upS", "dnA", "dnB", "dnC", "dnD", "dnS", "non"}, "id="+finalI, null, null, null, null);
+                    cursor4.moveToFirst();
+                    int[] getupChara = new int[5];
+                    int[] getdnChara = new int[5];
+                    int getnonChara =cursor4.getInt(10);
+                    for(int i=0;i<11;i++){
+                        getupChara[i] = cursor4.getInt(i);
+                        getdnChara[i] = cursor4.getInt(i+5);
+                    }
+                    cursor4.close();
+
                     Intent dbIntent2 = new Intent(MainActivity.this,SecondActivity.class);
                     if(getnick == null){
                         getnick = "-";
@@ -129,6 +140,9 @@ public class MainActivity extends AppCompatActivity {
                     dbIntent2.putExtra("passegg1", getegg1);
                     dbIntent2.putExtra("passegg2", getegg2);
                     dbIntent2.putExtra("passkotai", getV);
+                    dbIntent2.putExtra("passupChara", getupChara);
+                    dbIntent2.putExtra("passdnChara", getdnChara);
+                    dbIntent2.putExtra("passnonChara", getnonChara);
                     startActivityForResult(dbIntent2,1);
                 }
             });

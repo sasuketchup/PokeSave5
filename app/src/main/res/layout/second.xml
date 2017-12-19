@@ -3,208 +3,232 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:text="ポケモン名"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView1"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:ems="10"
-        android:id="@+id/editText2"
-        android:layout_below="@+id/textView2"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:ems="10"
-        android:id="@+id/editText"
-        android:layout_below="@+id/textView1"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+            <TextView
+                android:text="ポケモン名"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView1"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
 
-    <TextView
-        android:text="ニックネーム(コンセプト)"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView2"
-        android:layout_below="@+id/editText"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/editText2"
+                android:layout_below="@+id/textView2"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
 
-    <TextView
-        android:text="特性"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/editText2"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:id="@+id/textView3" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/editText"
+                android:layout_below="@+id/textView1"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:ems="10"
-        android:layout_below="@+id/textView3"
-        android:layout_alignRight="@+id/editText2"
-        android:layout_alignEnd="@+id/editText2"
-        android:id="@+id/tokusei" />
+            <TextView
+                android:text="ニックネーム(コンセプト)"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView2"
+                android:layout_below="@+id/editText"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
 
-    <TextView
-        android:text="持ち物"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/tokusei"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:id="@+id/textView4" />
+            <TextView
+                android:text="特性"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/editText2"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:id="@+id/textView3" />
 
-    <TextView
-        android:text="タマゴグループ"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/Item"
-        android:id="@+id/textView5" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:layout_below="@+id/textView3"
+                android:layout_alignRight="@+id/editText2"
+                android:layout_alignEnd="@+id/editText2"
+                android:id="@+id/tokusei" />
 
-    <TextView
-        android:text="グループ1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textView5"
-        android:id="@+id/eggGroup1"
-        android:textSize="18sp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignRight="@+id/textView5"
-        android:layout_alignEnd="@+id/textView5" />
+            <TextView
+                android:text="持ち物"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tokusei"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:id="@+id/textView4" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:ems="10"
-        android:id="@+id/Item"
-        android:layout_below="@+id/textView4"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+            <TextView
+                android:text="タマゴグループ"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Item"
+                android:id="@+id/textView5" />
 
-    <TextView
-        android:text="グループ2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/eggGroup2"
-        android:layout_below="@+id/textView5"
-        android:layout_toRightOf="@+id/textView5"
-        android:layout_alignRight="@+id/Item"
-        android:layout_alignEnd="@+id/Item"
-        android:textSize="18sp" />
+            <TextView
+                android:text="グループ1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView5"
+                android:id="@+id/eggGroup1"
+                android:textSize="18sp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignRight="@+id/textView5"
+                android:layout_alignEnd="@+id/textView5" />
 
-    <Button
-        android:text="保存"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/savebtn"
-        android:layout_alignParentTop="true"
-        android:layout_toRightOf="@+id/editText"
-        android:layout_toEndOf="@+id/editText" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/Item"
+                android:layout_below="@+id/textView4"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
 
-    <Button
-        android:text="削除"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/deletebtn"
-        android:layout_below="@+id/savebtn"
-        android:layout_toRightOf="@+id/editText2"
-        android:layout_toEndOf="@+id/editText2" />
+            <TextView
+                android:text="グループ2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/eggGroup2"
+                android:layout_below="@+id/textView5"
+                android:layout_toRightOf="@+id/textView5"
+                android:layout_alignRight="@+id/Item"
+                android:layout_alignEnd="@+id/Item"
+                android:textSize="18sp" />
 
-    <TextView
-        android:text="必要V個体値"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/eggGroup1"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:id="@+id/textView6" />
+            <Button
+                android:text="保存"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/savebtn"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/editText"
+                android:layout_toEndOf="@+id/editText" />
 
-    <TextView
-        android:text="H"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/tvVH"
-        android:textSize="36sp"
-        android:layout_below="@+id/textView6"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+            <Button
+                android:text="削除"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/deletebtn"
+                android:layout_below="@+id/savebtn"
+                android:layout_toRightOf="@+id/editText2"
+                android:layout_toEndOf="@+id/editText2" />
 
-    <TextView
-        android:text="A"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/tvVA"
-        android:textSize="36sp"
-        android:layout_below="@+id/textView6"
-        android:layout_toRightOf="@+id/tvVH"
-        android:layout_toEndOf="@+id/tvVH" />
+            <TextView
+                android:text="必要V個体値"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/eggGroup1"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:id="@+id/textView6" />
 
-    <TextView
-        android:text="B"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textView6"
-        android:layout_toRightOf="@+id/tvVA"
-        android:layout_toEndOf="@+id/tvVA"
-        android:id="@+id/tvVB"
-        android:textSize="36sp" />
+            <TextView
+                android:text="H"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvVH"
+                android:textSize="36sp"
+                android:layout_below="@+id/textView6"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
 
-    <TextView
-        android:text="C"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textView6"
-        android:layout_toRightOf="@+id/tvVB"
-        android:layout_toEndOf="@+id/tvVB"
-        android:id="@+id/tvVC"
-        android:textSize="36sp" />
+            <TextView
+                android:text="A"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvVA"
+                android:textSize="36sp"
+                android:layout_below="@+id/textView6"
+                android:layout_toRightOf="@+id/tvVH"
+                android:layout_toEndOf="@+id/tvVH" />
 
-    <TextView
-        android:text="D"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textView6"
-        android:layout_toRightOf="@+id/tvVC"
-        android:layout_toEndOf="@+id/tvVC"
-        android:id="@+id/tvVD"
-        android:textSize="36sp" />
+            <TextView
+                android:text="B"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView6"
+                android:layout_toRightOf="@+id/tvVA"
+                android:layout_toEndOf="@+id/tvVA"
+                android:id="@+id/tvVB"
+                android:textSize="36sp" />
 
-    <TextView
-        android:text="S"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/tvVS"
-        android:textSize="36sp"
-        android:layout_alignBaseline="@+id/tvVD"
-        android:layout_alignBottom="@+id/tvVD"
-        android:layout_toRightOf="@+id/tvVD"
-        android:layout_toEndOf="@+id/tvVD" />
+            <TextView
+                android:text="C"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView6"
+                android:layout_toRightOf="@+id/tvVB"
+                android:layout_toEndOf="@+id/tvVB"
+                android:id="@+id/tvVC"
+                android:textSize="36sp" />
 
-    <TextView
-        android:text="TextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/tvVH"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="11dp"
-        android:id="@+id/test" />
+            <TextView
+                android:text="D"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView6"
+                android:layout_toRightOf="@+id/tvVC"
+                android:layout_toEndOf="@+id/tvVC"
+                android:id="@+id/tvVD"
+                android:textSize="36sp" />
+
+            <TextView
+                android:text="S"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvVS"
+                android:textSize="36sp"
+                android:layout_alignBaseline="@+id/tvVD"
+                android:layout_alignBottom="@+id/tvVD"
+                android:layout_toRightOf="@+id/tvVD"
+                android:layout_toEndOf="@+id/tvVD" />
+
+            <TextView
+                android:text="性格候補"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvVH"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="11dp"
+                android:id="@+id/textView7" />
+
+            <Button
+                android:text="変更"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView7"
+                android:id="@+id/charabtn" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/charabtn"
+                android:id="@+id/charaLilay"></LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
 
 </RelativeLayout>

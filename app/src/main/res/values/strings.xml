@@ -1,3 +1,27 @@
 <resources>
     <string name="app_name">PokeSave5</string>
+
+    <string-array name="chara1">
+        <item>さみしがり</item>
+        <item>いじっぱり</item>
+        <item>やんちゃ</item>
+        <item>ゆうかん</item>
+        <item>ずぶとい</item>
+        <item>わんぱく</item>
+        <item>のうてんき</item>
+        <item>のんき</item>
+        <item>ひかえめ</item>
+        <item>おっとり</item>
+        <item>うっかりや</item>
+        <item>れいせい</item>
+        <item>おだやか</item>
+        <item>おとなしい</item>
+        <item>しんちょう</item>
+        <item>なまいき</item>
+        <item>おくびょう</item>
+        <item>せっかち</item>
+        <item>ようき</item>
+        <item>むじゃき</item>
+    </string-array>
+    <string name="chanon">てれや(-)\nがんばりや(-)\nすなお(-)\nきまぐれ(-)\nまじめ(-)</string>
 </resources>
