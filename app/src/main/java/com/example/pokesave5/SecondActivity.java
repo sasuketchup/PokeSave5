@@ -9,6 +9,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -166,176 +167,176 @@ public class SecondActivity extends AppCompatActivity {
             }
 
             // 性格
-//            Character shChara = new Character();
-//            Character value = shChara.setChara(varup, vardn, varnon);
-//            ckdup = value.ckdCup;
-//            ckddn = value.ckdCdn;
-//            ckdnon = value.ckdCnon;
+            Character shChara = new Character();
+            Character value = shChara.setChara(varup, vardn, varnon);
+            ckdup = value.ckdCup;
+            ckddn = value.ckdCdn;
+            ckdnon = value.ckdCnon;
 
-            // 子ビューを削除し結果をリセット
-            varChaLay.removeAllViews();
-
-            // 性格を表示するテキストビューにstringsから格納
-            String[] stchara = getResources().getStringArray(R.array.chara1);
-            TextView[] tvchara = new TextView[20];
-            for (int i=0;i<20;i++) {
-                tvchara[i] = new TextView(getApplication());
-                tvchara[i].setText(stchara[i]);
-                tvchara[i].setTextColor(Color.parseColor("#000000"));
-            }
-
-            // トーストのための結果の変数定義&リセット
-            // int reslut2 = 0;
-
-            // チェックに対応する性格を加算しながら表示
-            if (varup[0].isChecked()) {
-                ckdup[0] = 1;
-                if (vardn[1].isChecked()) {
-                    ckddn[1] = 1;
-                    varChaLay.addView(tvchara[0]);
-                    // reslut2 = 1;
-                }
-                if (vardn[2].isChecked()) {
-                    ckddn[2] = 1;
-                    varChaLay.addView(tvchara[1]);
-                    // reslut2 = 1;
-                }
-                if (vardn[3].isChecked()) {
-                    ckddn[3] = 1;
-                    varChaLay.addView(tvchara[2]);
-                    // reslut2 = 1;
-                }
-                if (vardn[4].isChecked()) {
-                    ckddn[4] = 1;
-                    varChaLay.addView(tvchara[3]);
-                    // reslut2 = 1;
-                }
-            }
-
-            if (varup[1].isChecked()) {
-                ckdup[1] = 1;
-                if (vardn[0].isChecked()) {
-                    ckddn[0] = 1;
-                    varChaLay.addView(tvchara[4]);
-                    // reslut2 = 1;
-                }
-                if (vardn[2].isChecked()) {
-                    ckddn[2] = 1;
-                    varChaLay.addView(tvchara[5]);
-                    // reslut2 = 1;
-                }
-                if (vardn[3].isChecked()) {
-                    ckddn[3] = 1;
-                    varChaLay.addView(tvchara[6]);
-                    // reslut2 = 1;
-                }
-                if (vardn[4].isChecked()) {
-                    ckddn[4] = 1;
-                    varChaLay.addView(tvchara[7]);
-                    // reslut2 = 1;
-                }
-            }
-
-            if (varup[2].isChecked()) {
-                ckdup[2] = 1;
-                if (vardn[0].isChecked()) {
-                    ckddn[0] = 1;
-                    varChaLay.addView(tvchara[8]);
-                    // reslut2 = 1;
-                }
-                if (vardn[1].isChecked()) {
-                    ckddn[1] = 1;;
-                    varChaLay.addView(tvchara[9]);
-                    // reslut2 = 1;
-                }
-                if (vardn[3].isChecked()) {
-                    ckddn[3] = 1;
-                    varChaLay.addView(tvchara[10]);
-                    // reslut2 = 1;
-                }
-                if (vardn[4].isChecked()) {
-                    ckddn[4] = 1;
-                    varChaLay.addView(tvchara[11]);
-                    // reslut2 = 1;
-                }
-            }
-
-            if (varup[3].isChecked()) {
-                ckdup[3] = 1;
-                if (vardn[0].isChecked()) {
-                    ckddn[0] = 1;
-                    varChaLay.addView(tvchara[12]);
-                    // reslut2 = 1;
-                }
-                if (vardn[1].isChecked()) {
-                    ckddn[1] = 1;
-                    varChaLay.addView(tvchara[13]);
-                    // reslut2 = 1;
-                }
-                if (vardn[2].isChecked()) {
-                    ckddn[2] = 1;
-                    varChaLay.addView(tvchara[14]);
-                    // reslut2 = 1;
-                }
-                if (vardn[4].isChecked()) {
-                    ckddn[4] = 1;
-                    varChaLay.addView(tvchara[15]);
-                    // reslut2 = 1;
-                }
-            }
-
-            if (varup[4].isChecked()) {
-                ckdup[4] = 1;
-                if (vardn[0].isChecked()) {
-                    ckddn[0] = 1;
-                    varChaLay.addView(tvchara[16]);
-                    // reslut2 = 1;
-                }
-                if (vardn[1].isChecked()) {
-                    ckddn[1] = 1;
-                    varChaLay.addView(tvchara[17]);
-                    // reslut2 = 1;
-                }
-                if (vardn[2].isChecked()) {
-                    ckddn[2] = 1;
-                    varChaLay.addView(tvchara[18]);
-                    // reslut2 = 1;
-                }
-                if (vardn[3].isChecked()) {
-                    ckddn[3] = 1;
-                    varChaLay.addView(tvchara[19]);
-                    // reslut2 = 1;
-                }
-            }
-
-            if (varnon.isChecked()) {
-                ckdnon = 1;
-                TextView tvnon = new TextView(getApplication());
-                tvnon.setText(getString(R.string.chanon));
-                tvnon.setTextColor(Color.parseColor("#000000"));
-                varChaLay.addView(tvnon);
-                // reslut2 = 1;
-            }
-
-            // 上がるステータスが選択されてないパターンの処理
-            for (int i=0;i<5;i++) {
-                if (vardn[i].isChecked()) {
-                    ckddn[i] = 1;
-                }
-            }
-
-            // チェック配列を整理
-            for (int i=0;i<5;i++) {
-                if (!varup[i].isChecked()) {
-                    ckdup[i] = 0;
-                }
-                if (!vardn[i].isChecked()) {
-                    ckddn[i] = 0;
-                }
-            }
-            if (!varnon.isChecked()) {
-                ckdnon = 0;
-            }
+//            // 子ビューを削除し結果をリセット
+//            varChaLay.removeAllViews();
+//
+//            // 性格を表示するテキストビューにstringsから格納
+//            String[] stchara = getResources().getStringArray(R.array.chara1);
+//            TextView[] tvchara = new TextView[20];
+//            for (int i=0;i<20;i++) {
+//                tvchara[i] = new TextView(getApplication());
+//                tvchara[i].setText(stchara[i]);
+////                tvchara[i].setTextColor(Color.parseColor("#000000"));
+//            }
+//
+//            // トーストのための結果の変数定義&リセット
+//            // int reslut2 = 0;
+//
+//            // チェックに対応する性格を加算しながら表示
+//            if (varup[0].isChecked()) {
+//                ckdup[0] = 1;
+//                if (vardn[1].isChecked()) {
+//                    ckddn[1] = 1;
+//                    varChaLay.addView(tvchara[0]);
+//                    // reslut2 = 1;
+//                }
+//                if (vardn[2].isChecked()) {
+//                    ckddn[2] = 1;
+//                    varChaLay.addView(tvchara[1]);
+//                    // reslut2 = 1;
+//                }
+//                if (vardn[3].isChecked()) {
+//                    ckddn[3] = 1;
+//                    varChaLay.addView(tvchara[2]);
+//                    // reslut2 = 1;
+//                }
+//                if (vardn[4].isChecked()) {
+//                    ckddn[4] = 1;
+//                    varChaLay.addView(tvchara[3]);
+//                    // reslut2 = 1;
+//                }
+//            }
+//
+//            if (varup[1].isChecked()) {
+//                ckdup[1] = 1;
+//                if (vardn[0].isChecked()) {
+//                    ckddn[0] = 1;
+//                    varChaLay.addView(tvchara[4]);
+//                    // reslut2 = 1;
+//                }
+//                if (vardn[2].isChecked()) {
+//                    ckddn[2] = 1;
+//                    varChaLay.addView(tvchara[5]);
+//                    // reslut2 = 1;
+//                }
+//                if (vardn[3].isChecked()) {
+//                    ckddn[3] = 1;
+//                    varChaLay.addView(tvchara[6]);
+//                    // reslut2 = 1;
+//                }
+//                if (vardn[4].isChecked()) {
+//                    ckddn[4] = 1;
+//                    varChaLay.addView(tvchara[7]);
+//                    // reslut2 = 1;
+//                }
+//            }
+//
+//            if (varup[2].isChecked()) {
+//                ckdup[2] = 1;
+//                if (vardn[0].isChecked()) {
+//                    ckddn[0] = 1;
+//                    varChaLay.addView(tvchara[8]);
+//                    // reslut2 = 1;
+//                }
+//                if (vardn[1].isChecked()) {
+//                    ckddn[1] = 1;;
+//                    varChaLay.addView(tvchara[9]);
+//                    // reslut2 = 1;
+//                }
+//                if (vardn[3].isChecked()) {
+//                    ckddn[3] = 1;
+//                    varChaLay.addView(tvchara[10]);
+//                    // reslut2 = 1;
+//                }
+//                if (vardn[4].isChecked()) {
+//                    ckddn[4] = 1;
+//                    varChaLay.addView(tvchara[11]);
+//                    // reslut2 = 1;
+//                }
+//            }
+//
+//            if (varup[3].isChecked()) {
+//                ckdup[3] = 1;
+//                if (vardn[0].isChecked()) {
+//                    ckddn[0] = 1;
+//                    varChaLay.addView(tvchara[12]);
+//                    // reslut2 = 1;
+//                }
+//                if (vardn[1].isChecked()) {
+//                    ckddn[1] = 1;
+//                    varChaLay.addView(tvchara[13]);
+//                    // reslut2 = 1;
+//                }
+//                if (vardn[2].isChecked()) {
+//                    ckddn[2] = 1;
+//                    varChaLay.addView(tvchara[14]);
+//                    // reslut2 = 1;
+//                }
+//                if (vardn[4].isChecked()) {
+//                    ckddn[4] = 1;
+//                    varChaLay.addView(tvchara[15]);
+//                    // reslut2 = 1;
+//                }
+//            }
+//
+//            if (varup[4].isChecked()) {
+//                ckdup[4] = 1;
+//                if (vardn[0].isChecked()) {
+//                    ckddn[0] = 1;
+//                    varChaLay.addView(tvchara[16]);
+//                    // reslut2 = 1;
+//                }
+//                if (vardn[1].isChecked()) {
+//                    ckddn[1] = 1;
+//                    varChaLay.addView(tvchara[17]);
+//                    // reslut2 = 1;
+//                }
+//                if (vardn[2].isChecked()) {
+//                    ckddn[2] = 1;
+//                    varChaLay.addView(tvchara[18]);
+//                    // reslut2 = 1;
+//                }
+//                if (vardn[3].isChecked()) {
+//                    ckddn[3] = 1;
+//                    varChaLay.addView(tvchara[19]);
+//                    // reslut2 = 1;
+//                }
+//            }
+//
+//            if (varnon.isChecked()) {
+//                ckdnon = 1;
+//                TextView tvnon = new TextView(getApplication());
+//                tvnon.setText(getString(R.string.chanon));
+//                tvnon.setTextColor(Color.parseColor("#000000"));
+//                varChaLay.addView(tvnon);
+//                // reslut2 = 1;
+//            }
+//
+//            // 上がるステータスが選択されてないパターンの処理
+//            for (int i=0;i<5;i++) {
+//                if (vardn[i].isChecked()) {
+//                    ckddn[i] = 1;
+//                }
+//            }
+//
+//            // チェック配列を整理
+//            for (int i=0;i<5;i++) {
+//                if (!varup[i].isChecked()) {
+//                    ckdup[i] = 0;
+//                }
+//                if (!vardn[i].isChecked()) {
+//                    ckddn[i] = 0;
+//                }
+//            }
+//            if (!varnon.isChecked()) {
+//                ckdnon = 0;
+//            }
         }
 
         // タマゴグループ1の選択
@@ -564,178 +565,178 @@ public class SecondActivity extends AppCompatActivity {
                                     @Override
                                     public void onClick(DialogInterface dialog, int which) {
                                         // 性格を表示
-//                                        Character shChara = new Character();
+                                        Character shChara = new Character();
 //                                        shChara.setChara(varup, vardn, varnon);
-//                                        Character value = shChara.setChara(varup, vardn, varnon);
-//                                        ckdup = value.ckdCup;
-//                                        ckddn = value.ckdCdn;
-//                                        ckdnon = value.ckdCnon;
+                                        Character value = shChara.setChara(varup, vardn, varnon);
+                                        ckdup = value.ckdCup;
+                                        ckddn = value.ckdCdn;
+                                        ckdnon = value.ckdCnon;
 
 
-                                        // 子ビューを削除し結果をリセット
-                                        varChaLay.removeAllViews();
-
-                                        // 性格を表示するテキストビューにstringsから格納
-                                        String[] stchara = getResources().getStringArray(R.array.chara1);
-                                        TextView[] tvchara = new TextView[20];
-                                        for (int i=0;i<20;i++) {
-                                            tvchara[i] = new TextView(getApplication());
-                                            tvchara[i].setText(stchara[i]);
-                                            tvchara[i].setTextColor(Color.parseColor("#000000"));
-                                        }
-
-                                        // トーストのための結果の変数定義&リセット
-                                        // int reslut2 = 0;
-
-                                        // チェックに対応する性格を加算しながら表示
-                                        if (varup[0].isChecked()) {
-                                            ckdup[0] = 1;
-                                            if (vardn[1].isChecked()) {
-                                                ckddn[1] = 1;
-                                                varChaLay.addView(tvchara[0]);
-                                                // reslut2 = 1;
-                                            }
-                                            if (vardn[2].isChecked()) {
-                                                ckddn[2] = 1;
-                                                varChaLay.addView(tvchara[1]);
-                                                // reslut2 = 1;
-                                            }
-                                            if (vardn[3].isChecked()) {
-                                                ckddn[3] = 1;
-                                                varChaLay.addView(tvchara[2]);
-                                                // reslut2 = 1;
-                                            }
-                                            if (vardn[4].isChecked()) {
-                                                ckddn[4] = 1;
-                                                varChaLay.addView(tvchara[3]);
-                                                // reslut2 = 1;
-                                            }
-                                        }
-
-                                        if (varup[1].isChecked()) {
-                                            ckdup[1] = 1;
-                                            if (vardn[0].isChecked()) {
-                                                ckddn[0] = 1;
-                                                varChaLay.addView(tvchara[4]);
-                                                // reslut2 = 1;
-                                            }
-                                            if (vardn[2].isChecked()) {
-                                                ckddn[2] = 1;
-                                                varChaLay.addView(tvchara[5]);
-                                                // reslut2 = 1;
-                                            }
-                                            if (vardn[3].isChecked()) {
-                                                ckddn[3] = 1;
-                                                varChaLay.addView(tvchara[6]);
-                                                // reslut2 = 1;
-                                            }
-                                            if (vardn[4].isChecked()) {
-                                                ckddn[4] = 1;
-                                                varChaLay.addView(tvchara[7]);
-                                                // reslut2 = 1;
-                                            }
-                                        }
-
-                                        if (varup[2].isChecked()) {
-                                            ckdup[2] = 1;
-                                            if (vardn[0].isChecked()) {
-                                                ckddn[0] = 1;
-                                                varChaLay.addView(tvchara[8]);
-                                                // reslut2 = 1;
-                                            }
-                                            if (vardn[1].isChecked()) {
-                                                ckddn[1] = 1;;
-                                                varChaLay.addView(tvchara[9]);
-                                                // reslut2 = 1;
-                                            }
-                                            if (vardn[3].isChecked()) {
-                                                ckddn[3] = 1;
-                                                varChaLay.addView(tvchara[10]);
-                                                // reslut2 = 1;
-                                            }
-                                            if (vardn[4].isChecked()) {
-                                                ckddn[4] = 1;
-                                                varChaLay.addView(tvchara[11]);
-                                                // reslut2 = 1;
-                                            }
-                                        }
-
-                                        if (varup[3].isChecked()) {
-                                            ckdup[3] = 1;
-                                            if (vardn[0].isChecked()) {
-                                                ckddn[0] = 1;
-                                                varChaLay.addView(tvchara[12]);
-                                                // reslut2 = 1;
-                                            }
-                                            if (vardn[1].isChecked()) {
-                                                ckddn[1] = 1;
-                                                varChaLay.addView(tvchara[13]);
-                                                // reslut2 = 1;
-                                            }
-                                            if (vardn[2].isChecked()) {
-                                                ckddn[2] = 1;
-                                                varChaLay.addView(tvchara[14]);
-                                                // reslut2 = 1;
-                                            }
-                                            if (vardn[4].isChecked()) {
-                                                ckddn[4] = 1;
-                                                varChaLay.addView(tvchara[15]);
-                                                // reslut2 = 1;
-                                            }
-                                        }
-
-                                        if (varup[4].isChecked()) {
-                                            ckdup[4] = 1;
-                                            if (vardn[0].isChecked()) {
-                                                ckddn[0] = 1;
-                                                varChaLay.addView(tvchara[16]);
-                                                // reslut2 = 1;
-                                            }
-                                            if (vardn[1].isChecked()) {
-                                                ckddn[1] = 1;
-                                                varChaLay.addView(tvchara[17]);
-                                                // reslut2 = 1;
-                                            }
-                                            if (vardn[2].isChecked()) {
-                                                ckddn[2] = 1;
-                                                varChaLay.addView(tvchara[18]);
-                                                // reslut2 = 1;
-                                            }
-                                            if (vardn[3].isChecked()) {
-                                                ckddn[3] = 1;
-                                                varChaLay.addView(tvchara[19]);
-                                                // reslut2 = 1;
-                                            }
-                                        }
-
-                                        if (varnon.isChecked()) {
-                                            ckdnon = 1;
-                                            TextView tvnon = new TextView(getApplication());
-                                            tvnon.setText(getString(R.string.chanon));
-                                            tvnon.setTextColor(Color.parseColor("#000000"));
-                                            varChaLay.addView(tvnon);
-                                            // reslut2 = 1;
-                                        }
-
-                                        // 上がるステータスが選択されてないパターンの処理
-                                        for (int i=0;i<5;i++) {
-                                            if (vardn[i].isChecked()) {
-                                                ckddn[i] = 1;
-                                            }
-                                        }
-
-                                        // チェック配列を整理
-                                        for (int i=0;i<5;i++) {
-                                            if (!varup[i].isChecked()) {
-                                                ckdup[i] = 0;
-                                            }
-                                            if (!vardn[i].isChecked()) {
-                                                ckddn[i] = 0;
-                                            }
-                                        }
-                                        if (!varnon.isChecked()) {
-                                            ckdnon = 0;
-                                        }
+//                                        // 子ビューを削除し結果をリセット
+//                                        varChaLay.removeAllViews();
+//
+//                                        // 性格を表示するテキストビューにstringsから格納
+//                                        String[] stchara = getResources().getStringArray(R.array.chara1);
+//                                        TextView[] tvchara = new TextView[20];
+//                                        for (int i=0;i<20;i++) {
+//                                            tvchara[i] = new TextView(getApplication());
+//                                            tvchara[i].setText(stchara[i]);
+////                                            tvchara[i].setTextColor(Color.parseColor("#000000"));
+//                                        }
+//
+//                                        // トーストのための結果の変数定義&リセット
+//                                        // int reslut2 = 0;
+//
+//                                        // チェックに対応する性格を加算しながら表示
+//                                        if (varup[0].isChecked()) {
+//                                            ckdup[0] = 1;
+//                                            if (vardn[1].isChecked()) {
+//                                                ckddn[1] = 1;
+//                                                varChaLay.addView(tvchara[0]);
+//                                                // reslut2 = 1;
+//                                            }
+//                                            if (vardn[2].isChecked()) {
+//                                                ckddn[2] = 1;
+//                                                varChaLay.addView(tvchara[1]);
+//                                                // reslut2 = 1;
+//                                            }
+//                                            if (vardn[3].isChecked()) {
+//                                                ckddn[3] = 1;
+//                                                varChaLay.addView(tvchara[2]);
+//                                                // reslut2 = 1;
+//                                            }
+//                                            if (vardn[4].isChecked()) {
+//                                                ckddn[4] = 1;
+//                                                varChaLay.addView(tvchara[3]);
+//                                                // reslut2 = 1;
+//                                            }
+//                                        }
+//
+//                                        if (varup[1].isChecked()) {
+//                                            ckdup[1] = 1;
+//                                            if (vardn[0].isChecked()) {
+//                                                ckddn[0] = 1;
+//                                                varChaLay.addView(tvchara[4]);
+//                                                // reslut2 = 1;
+//                                            }
+//                                            if (vardn[2].isChecked()) {
+//                                                ckddn[2] = 1;
+//                                                varChaLay.addView(tvchara[5]);
+//                                                // reslut2 = 1;
+//                                            }
+//                                            if (vardn[3].isChecked()) {
+//                                                ckddn[3] = 1;
+//                                                varChaLay.addView(tvchara[6]);
+//                                                // reslut2 = 1;
+//                                            }
+//                                            if (vardn[4].isChecked()) {
+//                                                ckddn[4] = 1;
+//                                                varChaLay.addView(tvchara[7]);
+//                                                // reslut2 = 1;
+//                                            }
+//                                        }
+//
+//                                        if (varup[2].isChecked()) {
+//                                            ckdup[2] = 1;
+//                                            if (vardn[0].isChecked()) {
+//                                                ckddn[0] = 1;
+//                                                varChaLay.addView(tvchara[8]);
+//                                                // reslut2 = 1;
+//                                            }
+//                                            if (vardn[1].isChecked()) {
+//                                                ckddn[1] = 1;;
+//                                                varChaLay.addView(tvchara[9]);
+//                                                // reslut2 = 1;
+//                                            }
+//                                            if (vardn[3].isChecked()) {
+//                                                ckddn[3] = 1;
+//                                                varChaLay.addView(tvchara[10]);
+//                                                // reslut2 = 1;
+//                                            }
+//                                            if (vardn[4].isChecked()) {
+//                                                ckddn[4] = 1;
+//                                                varChaLay.addView(tvchara[11]);
+//                                                // reslut2 = 1;
+//                                            }
+//                                        }
+//
+//                                        if (varup[3].isChecked()) {
+//                                            ckdup[3] = 1;
+//                                            if (vardn[0].isChecked()) {
+//                                                ckddn[0] = 1;
+//                                                varChaLay.addView(tvchara[12]);
+//                                                // reslut2 = 1;
+//                                            }
+//                                            if (vardn[1].isChecked()) {
+//                                                ckddn[1] = 1;
+//                                                varChaLay.addView(tvchara[13]);
+//                                                // reslut2 = 1;
+//                                            }
+//                                            if (vardn[2].isChecked()) {
+//                                                ckddn[2] = 1;
+//                                                varChaLay.addView(tvchara[14]);
+//                                                // reslut2 = 1;
+//                                            }
+//                                            if (vardn[4].isChecked()) {
+//                                                ckddn[4] = 1;
+//                                                varChaLay.addView(tvchara[15]);
+//                                                // reslut2 = 1;
+//                                            }
+//                                        }
+//
+//                                        if (varup[4].isChecked()) {
+//                                            ckdup[4] = 1;
+//                                            if (vardn[0].isChecked()) {
+//                                                ckddn[0] = 1;
+//                                                varChaLay.addView(tvchara[16]);
+//                                                // reslut2 = 1;
+//                                            }
+//                                            if (vardn[1].isChecked()) {
+//                                                ckddn[1] = 1;
+//                                                varChaLay.addView(tvchara[17]);
+//                                                // reslut2 = 1;
+//                                            }
+//                                            if (vardn[2].isChecked()) {
+//                                                ckddn[2] = 1;
+//                                                varChaLay.addView(tvchara[18]);
+//                                                // reslut2 = 1;
+//                                            }
+//                                            if (vardn[3].isChecked()) {
+//                                                ckddn[3] = 1;
+//                                                varChaLay.addView(tvchara[19]);
+//                                                // reslut2 = 1;
+//                                            }
+//                                        }
+//
+//                                        if (varnon.isChecked()) {
+//                                            ckdnon = 1;
+//                                            TextView tvnon = new TextView(getApplication());
+//                                            tvnon.setText(getString(R.string.chanon));
+//                                            tvnon.setTextColor(Color.parseColor("#000000"));
+//                                            varChaLay.addView(tvnon);
+//                                            // reslut2 = 1;
+//                                        }
+//
+//                                        // 上がるステータスが選択されてないパターンの処理
+//                                        for (int i=0;i<5;i++) {
+//                                            if (vardn[i].isChecked()) {
+//                                                ckddn[i] = 1;
+//                                            }
+//                                        }
+//
+//                                        // チェック配列を整理
+//                                        for (int i=0;i<5;i++) {
+//                                            if (!varup[i].isChecked()) {
+//                                                ckdup[i] = 0;
+//                                            }
+//                                            if (!vardn[i].isChecked()) {
+//                                                ckddn[i] = 0;
+//                                            }
+//                                        }
+//                                        if (!varnon.isChecked()) {
+//                                            ckdnon = 0;
+//                                        }
                                     }
                                 }
                         );
