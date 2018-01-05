@@ -124,7 +124,7 @@ public class MainActivity extends AppCompatActivity {
                     int[] getupChara = new int[5];
                     int[] getdnChara = new int[5];
                     int getnonChara =cursor4.getInt(10);
-                    for(int i=0;i<11;i++){
+                    for(int i=0;i<5;i++){
                         getupChara[i] = cursor4.getInt(i);
                         getdnChara[i] = cursor4.getInt(i+5);
                     }
