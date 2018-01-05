@@ -80,6 +80,24 @@ public class SecondActivity extends AppCompatActivity {
         final int catchId = itnt.getIntExtra("passId", 0);
         final String catchName = itnt.getStringExtra("passName");
 
+
+        MyOpenHelper helper = new MyOpenHelper(this);
+        final SQLiteDatabase db = helper.getWritableDatabase();
+
+        pokeName = (EditText) findViewById(R.id.editText);
+        nickName = (EditText) findViewById(R.id.editText2);
+        tokusei = (EditText) findViewById(R.id.tokusei);
+        Item = (EditText) findViewById(R.id.Item);
+        egg1 = (TextView) findViewById(R.id.eggGroup1);
+        egg2 = (TextView) findViewById(R.id.eggGroup2);
+
+        statV[0] = (TextView) findViewById(R.id.tvVH);
+        statV[1] = (TextView) findViewById(R.id.tvVA);
+        statV[2] = (TextView) findViewById(R.id.tvVB);
+        statV[3] = (TextView) findViewById(R.id.tvVC);
+        statV[4] = (TextView) findViewById(R.id.tvVD);
+        statV[5] = (TextView) findViewById(R.id.tvVS);
+
         if (catchName != null) {
             final String catchnick = itnt.getStringExtra("passnick");
             final String catchtoku = itnt.getStringExtra("passtoku");
@@ -102,35 +120,6 @@ public class SecondActivity extends AppCompatActivity {
             egg2.setText(catchegg2);
         }
 
-        MyOpenHelper helper = new MyOpenHelper(this);
-        final SQLiteDatabase db = helper.getWritableDatabase();
-
-        pokeName = (EditText) findViewById(R.id.editText);
-        nickName = (EditText) findViewById(R.id.editText2);
-        tokusei = (EditText) findViewById(R.id.tokusei);
-        Item = (EditText) findViewById(R.id.Item);
-        egg1 = (TextView) findViewById(R.id.eggGroup1);
-        egg2 = (TextView) findViewById(R.id.eggGroup2);
-
-        statV[0] = (TextView) findViewById(R.id.tvVH);
-        statV[1] = (TextView) findViewById(R.id.tvVA);
-        statV[2] = (TextView) findViewById(R.id.tvVB);
-        statV[3] = (TextView) findViewById(R.id.tvVC);
-        statV[4] = (TextView) findViewById(R.id.tvVD);
-        statV[5] = (TextView) findViewById(R.id.tvVS);
-
-        // フィールドにチェックボックスのインスタンスを代入
-//        varup[0] = (CheckBox) layout.findViewById(R.id.upA);
-//        varup[1] = (CheckBox) layout.findViewById(R.id.upB);
-//        varup[2] = (CheckBox) layout.findViewById(R.id.upC);
-//        varup[3] = (CheckBox) layout.findViewById(R.id.upD);
-//        varup[4] = (CheckBox) layout.findViewById(R.id.upS);
-//        vardn[0] = (CheckBox) layout.findViewById(R.id.downA);
-//        vardn[1] = (CheckBox) layout.findViewById(R.id.downB);
-//        vardn[2] = (CheckBox) layout.findViewById(R.id.downC);
-//        vardn[3] = (CheckBox) layout.findViewById(R.id.downD);
-//        vardn[4] = (CheckBox) layout.findViewById(R.id.downS);
-//        varnon = (CheckBox) layout.findViewById(R.id.non);
 
         // 必要V箇所の状態を格納する配列
         final int[] Vsave = new int[6];
@@ -138,18 +127,6 @@ public class SecondActivity extends AppCompatActivity {
             Vsave[k] = 0;
         }
 
-        // (性格)保存データからチェックボックスへ変換
-        for (int i = 0; i < 5; i++) {
-            if (ckdup[i] == 1) {
-                varup[i].setChecked(true);
-            }
-            if (ckddn[i] == 1) {
-                vardn[i].setChecked(true);
-            }
-        }
-        if (ckdnon == 1) {
-            varnon.setChecked(true);
-        }
 
         // 受け取った値を表示
         if (catchName != null) {
@@ -189,154 +166,28 @@ public class SecondActivity extends AppCompatActivity {
             // int reslut2 = 0;
 
             // チェックに対応する性格を加算しながら表示
-            if (varup[0].isChecked()) {
-                ckdup[0] = 1;
-                if (vardn[1].isChecked()) {
-                    ckddn[1] = 1;
-                    varChaLay.addView(tvchara[0]);
-                    // reslut2 = 1;
-                }
-                if (vardn[2].isChecked()) {
-                    ckddn[2] = 1;
-                    varChaLay.addView(tvchara[1]);
-                    // reslut2 = 1;
-                }
-                if (vardn[3].isChecked()) {
-                    ckddn[3] = 1;
-                    varChaLay.addView(tvchara[2]);
-                    // reslut2 = 1;
-                }
-                if (vardn[4].isChecked()) {
-                    ckddn[4] = 1;
-                    varChaLay.addView(tvchara[3]);
-                    // reslut2 = 1;
+
+            int[][] blackMagicMap = {   // Must fix me later
+                    {-1, 4, 8,12,16},
+                    { 0,-1, 9,13,17},
+                    { 1, 5,-1,14,18},
+                    { 2, 6,10,-1,19},
+                    { 3, 7,11,15,-1}
+            };
+            for(int i = 0; i < 5; i++){
+                for(int j = 0; j < 5; j++){
+                    if(ckdup[i] == 1 && ckddn[j] == 1){
+                        varChaLay.addView(tvchara[blackMagicMap[j][i]]);
+                    }
                 }
             }
-
-            if (varup[1].isChecked()) {
-                ckdup[1] = 1;
-                if (vardn[0].isChecked()) {
-                    ckddn[0] = 1;
-                    varChaLay.addView(tvchara[4]);
-                    // reslut2 = 1;
-                }
-                if (vardn[2].isChecked()) {
-                    ckddn[2] = 1;
-                    varChaLay.addView(tvchara[5]);
-                    // reslut2 = 1;
-                }
-                if (vardn[3].isChecked()) {
-                    ckddn[3] = 1;
-                    varChaLay.addView(tvchara[6]);
-                    // reslut2 = 1;
-                }
-                if (vardn[4].isChecked()) {
-                    ckddn[4] = 1;
-                    varChaLay.addView(tvchara[7]);
-                    // reslut2 = 1;
-                }
-            }
-
-            if (varup[2].isChecked()) {
-                ckdup[2] = 1;
-                if (vardn[0].isChecked()) {
-                    ckddn[0] = 1;
-                    varChaLay.addView(tvchara[8]);
-                    // reslut2 = 1;
-                }
-                if (vardn[1].isChecked()) {
-                    ckddn[1] = 1;;
-                    varChaLay.addView(tvchara[9]);
-                    // reslut2 = 1;
-                }
-                if (vardn[3].isChecked()) {
-                    ckddn[3] = 1;
-                    varChaLay.addView(tvchara[10]);
-                    // reslut2 = 1;
-                }
-                if (vardn[4].isChecked()) {
-                    ckddn[4] = 1;
-                    varChaLay.addView(tvchara[11]);
-                    // reslut2 = 1;
-                }
-            }
-
-            if (varup[3].isChecked()) {
-                ckdup[3] = 1;
-                if (vardn[0].isChecked()) {
-                    ckddn[0] = 1;
-                    varChaLay.addView(tvchara[12]);
-                    // reslut2 = 1;
-                }
-                if (vardn[1].isChecked()) {
-                    ckddn[1] = 1;
-                    varChaLay.addView(tvchara[13]);
-                    // reslut2 = 1;
-                }
-                if (vardn[2].isChecked()) {
-                    ckddn[2] = 1;
-                    varChaLay.addView(tvchara[14]);
-                    // reslut2 = 1;
-                }
-                if (vardn[4].isChecked()) {
-                    ckddn[4] = 1;
-                    varChaLay.addView(tvchara[15]);
-                    // reslut2 = 1;
-                }
-            }
-
-            if (varup[4].isChecked()) {
-                ckdup[4] = 1;
-                if (vardn[0].isChecked()) {
-                    ckddn[0] = 1;
-                    varChaLay.addView(tvchara[16]);
-                    // reslut2 = 1;
-                }
-                if (vardn[1].isChecked()) {
-                    ckddn[1] = 1;
-                    varChaLay.addView(tvchara[17]);
-                    // reslut2 = 1;
-                }
-                if (vardn[2].isChecked()) {
-                    ckddn[2] = 1;
-                    varChaLay.addView(tvchara[18]);
-                    // reslut2 = 1;
-                }
-                if (vardn[3].isChecked()) {
-                    ckddn[3] = 1;
-                    varChaLay.addView(tvchara[19]);
-                    // reslut2 = 1;
-                }
-            }
-
-            if (varnon.isChecked()) {
-                ckdnon = 1;
+            if (ckdnon == 1) {
                 TextView tvnon = new TextView(getApplication());
                 tvnon.setText(getString(R.string.chanon));
                 tvnon.setTextColor(Color.parseColor("#000000"));
                 varChaLay.addView(tvnon);
-                // reslut2 = 1;
             }
 
-            // 上がるステータスが選択されてないパターンの処理
-            for (int i=0;i<5;i++) {
-                if (vardn[i].isChecked()) {
-                    ckddn[i] = 1;
-                }
-            }
-
-            // チェック配列を整理
-            for (int i=0;i<5;i++) {
-                if (!varup[i].isChecked()) {
-                    ckdup[i] = 0;
-                }
-                if (!vardn[i].isChecked()) {
-                    ckddn[i] = 0;
-                }
-            }
-            if (!varnon.isChecked()) {
-                ckdnon = 0;
-            }
         }
 
         // タマゴグループ1の選択
